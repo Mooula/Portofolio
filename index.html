@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
+    <title>Portofolio Mahasiswa Informatika</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,263 +12,280 @@
             theme: {
                 extend: {
                     colors: {
-                        darkBg: '#090d16',
-                        cardBg: '#111726',
+                        darkBg: '#0b0f17',
+                        cardBg: '#131b2e',
                         accent: '#6366f1',
-                        accentGlow: '#818cf8',
                     }
                 }
             }
         }
     </script>
     <!-- Font Inter & Lucide Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body { font-family: 'Inter', sans-serif; }
         .glass {
-            background: rgba(17, 23, 38, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(19, 27, 46, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
     </style>
 </head>
 <body class="bg-darkBg text-slate-200 antialiased selection:bg-indigo-500 selection:text-white">
 
-    <!-- Header / Navbar -->
+    <!-- Header / Floating Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
         <nav class="max-w-5xl mx-auto glass rounded-2xl px-6 py-3 flex items-center justify-between shadow-2xl">
-            <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                Portfolio<span class="text-indigo-500">.</span>
+            <a href="#" class="text-lg font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent uppercase tracking-wider">
+                PORTFOLIO<span class="text-indigo-500">.</span>
             </a>
             
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
-                <a href="#about" class="hover:text-indigo-400 transition-colors">Tentang</a>
-                <a href="#skills" class="hover:text-indigo-400 transition-colors">Keahlian</a>
-                <a href="#projects" class="hover:text-indigo-400 transition-colors">Proyek</a>
-                <a href="#contact" class="hover:text-indigo-400 transition-colors">Kontak</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+                <a href="#what-i-can-do" class="hover:text-indigo-400 transition-colors">What I Can Do</a>
+                <a href="#achievement" class="hover:text-indigo-400 transition-colors">Achievement</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
 
-            <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white transition-all shadow-lg shadow-indigo-500/20">
-                Hubungi Saya
+            <a href="#contact" class="px-5 py-2 text-xs font-semibold rounded-xl bg-white text-slate-900 hover:bg-slate-200 transition-all shadow-lg">
+                Hire Me
             </a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="min-h-screen flex items-center justify-center pt-24 pb-16 px-6 relative overflow-hidden">
-        <!-- Ambient Background Light -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[140px] pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
-            <!-- Frame Upload Foto Profil Dinamis -->
-            <div class="relative group w-36 h-36 mx-auto">
+            <!-- Foto Profil -->
+            <div class="relative group w-40 h-40 mx-auto">
                 <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-500"></div>
-                <div class="relative w-36 h-36 rounded-full overflow-hidden bg-slate-800 flex items-center justify-center border-2 border-slate-700/80">
+                <div class="relative w-40 h-40 rounded-full overflow-hidden bg-slate-800 border-2 border-slate-700/80">
                     <img id="avatarPreview" src="foto profil.jpg" alt="Foto Profil" class="w-full h-full object-cover">
                 </div>
-                <!-- Tombol Ganti Foto -->
-                <label for="uploadFoto" class="absolute bottom-0 right-0 bg-indigo-600 hover:bg-indigo-500 text-white p-2.5 rounded-full cursor-pointer shadow-lg transition-transform hover:scale-110">
-                    <i data-lucide="camera" class="w-4 h-4"></i>
-                    <input type="file" id="uploadFoto" accept="image/*" class="hidden" onchange="previewImage(event)">
-                </label>
             </div>
 
-            <div class="space-y-3">
+            <div class="space-y-4">
                 <span class="inline-block px-3 py-1 text-xs font-medium bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20">
-                    Halo, Selamat Datang 👋
+                    S1 Teknik Informatika - Mahasiswa Baru
                 </span>
                 <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
-                    Membangun Pengalaman <br>
-                    <span class="bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">Digital yang Memukau</span>
+                    Membangun Solusi & <br>
+                    <span class="bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">Pengalaman Digital Modern</span>
                 </h1>
-                <p class="text-slate-400 max-w-xl mx-auto text-base md:text-lg leading-relaxed">
-                    Siswa / Developer yang berfokus menciptakan tampilan web bersih, responsif, dan fungsional.
+                <p class="text-slate-400 max-w-xl mx-auto text-base leading-relaxed">
+                    Selamat datang di portofolio pribadi saya. Tempat saya membagikan perjalanan akademik, keterampilan, dan pencapaian di bidang Informatika.
                 </p>
             </div>
 
-            <!-- Action Buttons -->
             <div class="flex items-center justify-center gap-4">
-                <a href="#projects" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-all shadow-lg shadow-indigo-600/30">
-                    Lihat Karya
+                <a href="#achievement" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-all shadow-lg shadow-indigo-600/30">
+                    Lihat Pencapaian
                 </a>
                 <a href="#contact" class="px-6 py-3 rounded-xl glass hover:bg-slate-800 text-slate-300 font-medium text-sm transition-all">
-                    Mari Berdiskusi
+                    Hubungi Saya
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- SECTION 1: ABOUT ME (Lengkap NIM, Nama, Prodi sesuai PDF) -->
     <section id="about" class="py-20 px-6 border-t border-slate-800/60">
-        <div class="max-w-4xl mx-auto space-y-8">
-            <div class="text-center space-y-2">
-                <h2 class="text-2xl md:text-3xl font-bold text-white">Tentang Saya</h2>
-                <div class="w-12 h-1 bg-indigo-500 mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="glass p-8 rounded-2xl text-slate-300 leading-relaxed text-center md:text-left space-y-4">
-                <p>
-                    Saya seorang pengembang independen dan pelajar yang antusias dalam dunia teknologi. Saya suka menyederhanakan masalah kompleks menjadi antarmuka yang indah dan mudah digunakan.
-                </p>
-                <p class="text-slate-400 text-sm">
-                    Selalu terbuka untuk mempelajari teknologi baru, berkolaborasi dalam proyek seru, dan meningkatkan keterampilan coding setiap harinya.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6 border-t border-slate-800/60">
         <div class="max-w-4xl mx-auto space-y-10">
             <div class="text-center space-y-2">
-                <h2 class="text-2xl md:text-3xl font-bold text-white">Keahlian & Alat</h2>
+                <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Profil Singkat</p>
+                <h2 class="text-3xl font-bold text-white">About Me</h2>
                 <div class="w-12 h-1 bg-indigo-500 mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="glass p-5 rounded-2xl flex items-center space-x-4 hover:border-indigo-500/50 transition-all group">
-                    <div class="p-3 bg-indigo-500/10 rounded-xl text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
-                        <i data-lucide="code-2" class="w-6 h-6"></i>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Identitas Akademik Card -->
+                <div class="glass p-6 rounded-2xl space-y-4 border-indigo-500/30">
+                    <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl w-fit">
+                        <i data-lucide="user-check" class="w-6 h-6"></i>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-white text-sm">HTML & CSS</h3>
-                        <p class="text-xs text-slate-400">Frontend</p>
+                        <p class="text-xs text-slate-400 uppercase font-semibold">Identitas Mahasiswa</p>
+                        <h3 class="text-lg font-bold text-white mt-1">Nama Lengkap Anda</h3>
+                    </div>
+                    <div class="space-y-2 text-sm text-slate-300 border-t border-slate-700/50 pt-3">
+                        <p><span class="text-slate-400">NIM:</span> 24051204000</p>
+                        <p><span class="text-slate-400">Prodi:</span> S1 Teknik Informatika</p>
+                        <p><span class="text-slate-400">Pendidikan:</span> Universitas Negeri Surabaya</p>
                     </div>
                 </div>
 
-                <div class="glass p-5 rounded-2xl flex items-center space-x-4 hover:border-indigo-500/50 transition-all group">
-                    <div class="p-3 bg-indigo-500/10 rounded-xl text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
-                        <i data-lucide="file-json" class="w-6 h-6"></i>
+                <!-- Deskripsi & Aktivitas -->
+                <div class="md:col-span-2 glass p-6 rounded-2xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Problem Solver & Technology Enthusiast</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Saya adalah Mahasiswa Baru Teknik Informatika yang berfokus pada pengembangan perangkat lunak, sistem basis data, dan eksplorasi teknologi web. Saya antusias mempelajari hal baru dan memecahkan masalah melalui pemrograman.
+                        </p>
                     </div>
-                    <div>
-                        <h3 class="font-semibold text-white text-sm">JavaScript</h3>
-                        <p class="text-xs text-slate-400">Interaktivitas</p>
-                    </div>
-                </div>
 
-                <div class="glass p-5 rounded-2xl flex items-center space-x-4 hover:border-indigo-500/50 transition-all group">
-                    <div class="p-3 bg-indigo-500/10 rounded-xl text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
-                        <i data-lucide="palette" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-white text-sm">Tailwind CSS</h3>
-                        <p class="text-xs text-slate-400">Styling</p>
-                    </div>
-                </div>
-
-                <div class="glass p-5 rounded-2xl flex items-center space-x-4 hover:border-indigo-500/50 transition-all group">
-                    <div class="p-3 bg-indigo-500/10 rounded-xl text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
-                        <i data-lucide="git-branch" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-white text-sm">Git & GitHub</h3>
-                        <p class="text-xs text-slate-400">Version Control</p>
+                    <!-- Statistik & Aktivitas Saat Ini -->
+                    <div class="grid grid-cols-3 gap-4 border-t border-slate-700/50 pt-4 text-center">
+                        <div>
+                            <p class="text-2xl font-bold text-indigo-400">10+</p>
+                            <p class="text-[11px] text-slate-400 uppercase">Project</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-sky-400">5+</p>
+                            <p class="text-[11px] text-slate-400 uppercase">Sertifikat</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-emerald-400">2026</p>
+                            <p class="text-[11px] text-slate-400 uppercase">Aktif Kuliah</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 border-t border-slate-800/60">
+    <!-- SECTION 2: WHAT I CAN DO (Skills & Tools) -->
+    <section id="what-i-can-do" class="py-20 px-6 border-t border-slate-800/60">
         <div class="max-w-4xl mx-auto space-y-10">
             <div class="text-center space-y-2">
-                <h2 class="text-2xl md:text-3xl font-bold text-white">Proyek Unggulan</h2>
+                <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest">My Capabilities</p>
+                <h2 class="text-3xl font-bold text-white">What I Can Do</h2>
                 <div class="w-12 h-1 bg-indigo-500 mx-auto rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- Card 1 -->
-                <div class="glass rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all group">
-                    <div class="h-48 bg-slate-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Project" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="font-bold text-white text-lg">Aplikasi Web Portofolio</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">Design website portofolio interaktif dan responsif dengan fitur upload foto profil langsung.</p>
-                        <div class="flex items-center space-x-2 pt-2">
-                            <span class="text-[10px] bg-indigo-500/10 text-indigo-400 px-2.5 py-1 rounded-md border border-indigo-500/20">Tailwind</span>
-                            <span class="text-[10px] bg-indigo-500/10 text-indigo-400 px-2.5 py-1 rounded-md border border-indigo-500/20">JavaScript</span>
+                <!-- Skill 1 -->
+                <div class="glass p-6 rounded-2xl space-y-4 hover:border-indigo-500/50 transition-all">
+                    <div class="flex items-center space-x-4">
+                        <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl">
+                            <i data-lucide="code" class="w-6 h-6"></i>
                         </div>
+                        <div>
+                            <h3 class="font-bold text-white text-base">Web Development</h3>
+                            <p class="text-xs text-slate-400">Frontend & Interface</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Membangun tampilan web yang responsif, rapi, dan interaktif menggunakan HTML5, CSS3, Tailwind CSS, dan JavaScript.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="text-[10px] bg-slate-800 text-indigo-300 px-2.5 py-1 rounded-md border border-slate-700">HTML/CSS</span>
+                        <span class="text-[10px] bg-slate-800 text-indigo-300 px-2.5 py-1 rounded-md border border-slate-700">Tailwind</span>
+                        <span class="text-[10px] bg-slate-800 text-indigo-300 px-2.5 py-1 rounded-md border border-slate-700">JavaScript</span>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="glass rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all group">
-                    <div class="h-48 bg-slate-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Project" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="font-bold text-white text-lg">Sistem Kasir & Data Sales</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">Dashboard manajemen data transaksi sederhana dengan analitik visual yang efisien.</p>
-                        <div class="flex items-center space-x-2 pt-2">
-                            <span class="text-[10px] bg-indigo-500/10 text-indigo-400 px-2.5 py-1 rounded-md border border-indigo-500/20">Python</span>
-                            <span class="text-[10px] bg-indigo-500/10 text-indigo-400 px-2.5 py-1 rounded-md border border-indigo-500/20">MySQL</span>
+                <!-- Skill 2 -->
+                <div class="glass p-6 rounded-2xl space-y-4 hover:border-indigo-500/50 transition-all">
+                    <div class="flex items-center space-x-4">
+                        <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl">
+                            <i data-lucide="database" class="w-6 h-6"></i>
                         </div>
+                        <div>
+                            <h3 class="font-bold text-white text-base">Database & Programming</h3>
+                            <p class="text-xs text-slate-400">Data Management</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Mengelola basis data relasional MySQL, query DDL/DML, pemrosesan data sederhana menggunakan Python dan Pandas.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="text-[10px] bg-slate-800 text-indigo-300 px-2.5 py-1 rounded-md border border-slate-700">MySQL</span>
+                        <span class="text-[10px] bg-slate-800 text-indigo-300 px-2.5 py-1 rounded-md border border-slate-700">Python</span>
+                        <span class="text-[10px] bg-slate-800 text-indigo-300 px-2.5 py-1 rounded-md border border-slate-700">VS Code</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 border-t border-slate-800/60">
-        <div class="max-w-2xl mx-auto space-y-8 text-center">
-            <div class="space-y-2">
-                <h2 class="text-2xl md:text-3xl font-bold text-white">Hubungi Saya</h2>
-                <p class="text-sm text-slate-400">Punya pertanyaan atau ingin bekerja sama? Kirimkan pesan di bawah ini!</p>
+    <!-- SECTION 3: ACHIEVEMENT (Pencapaian & Sertifikat) -->
+    <section id="achievement" class="py-20 px-6 border-t border-slate-800/60">
+        <div class="max-w-4xl mx-auto space-y-10">
+            <div class="text-center space-y-2">
+                <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Pencapaian & Penghargaan</p>
+                <h2 class="text-3xl font-bold text-white">Achievement</h2>
+                <div class="w-12 h-1 bg-indigo-500 mx-auto rounded-full"></div>
             </div>
 
-            <form onsubmit="handleSubmit(event)" class="glass p-8 rounded-2xl space-y-4 text-left">
-                <div>
-                    <label class="block text-xs text-slate-400 mb-1">Nama Lengkap</label>
-                    <input type="text" required placeholder="Nama Anda" class="w-full bg-slate-900/60 border border-slate-700/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Item Achievement 1 -->
+                <div class="glass p-6 rounded-2xl space-y-3 hover:border-indigo-500/50 transition-all">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">2026</span>
+                        <span class="text-xs text-slate-400">Penyelenggara: HMJ Informatika</span>
+                    </div>
+                    <h3 class="font-bold text-white text-lg">Peserta Ameliorer Aktif 11</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Mengikuti rangkaian pelatihan pembuatan website portofolio interaktif dan pengembangan soft/hard skill Informatika.
+                    </p>
                 </div>
-                <div>
-                    <label class="block text-xs text-slate-400 mb-1">Email</label>
-                    <input type="email" required placeholder="email@contoh.com" class="w-full bg-slate-900/60 border border-slate-700/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+
+                <!-- Item Achievement 2 -->
+                <div class="glass p-6 rounded-2xl space-y-3 hover:border-indigo-500/50 transition-all">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">2026</span>
+                        <span class="text-xs text-slate-400">Penyelenggara: Sertifikasi Online</span>
+                    </div>
+                    <h3 class="font-bold text-white text-lg">Sertifikat Dasar Pemrograman Python</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Menyelesaikan kursus dasar-dasar logika pemrograman, variabel, pengkondisian, dan struktur data Python.
+                    </p>
                 </div>
-                <div>
-                    <label class="block text-xs text-slate-400 mb-1">Pesan</label>
-                    <textarea rows="4" required placeholder="Tuliskan pesan Anda..." class="w-full bg-slate-900/60 border border-slate-700/60 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
-                </div>
-                <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl text-sm transition-all shadow-lg shadow-indigo-600/30">
-                    Kirim Pesan
-                </button>
-            </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CONTACT -->
+    <section id="contact" class="py-20 px-6 border-t border-slate-800/60">
+        <div class="max-w-3xl mx-auto space-y-10 text-center">
+            <div class="space-y-2">
+                <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Get In Touch</p>
+                <h2 class="text-3xl font-bold text-white">Contact Me</h2>
+                <p class="text-sm text-slate-400">Mari terhubung atau berdiskusi mengenai proyek menarik!</p>
+            </div>
+
+            <!-- Kartu Kontak & Akun Profesional -->
+            <div class="grid md:grid-cols-3 gap-4">
+                <a href="mailto:26050974076@mhs.unesa.ac.id" class="glass p-5 rounded-2xl flex flex-col items-center space-y-2 hover:border-indigo-500/50 transition-all">
+                    <i data-lucide="mail" class="w-6 h-6 text-indigo-400"></i>
+                    <span class="text-xs font-semibold text-white">Email</span>
+                    <span class="text-[11px] text-slate-400 truncate w-full">emailanda@gmail.com</span>
+                </a>
+
+                <a href="https://github.com/Mooula" target="_blank" class="glass p-5 rounded-2xl flex flex-col items-center space-y-2 hover:border-indigo-500/50 transition-all">
+                    <i data-lucide="github" class="w-6 h-6 text-indigo-400"></i>
+                    <span class="text-xs font-semibold text-white">GitHub</span>
+                    <span class="text-[11px] text-slate-400 truncate w-full">github.com/Mooula</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/muhammad-rasya-maulana-b6b42a432?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="glass p-5 rounded-2xl flex flex-col items-center space-y-2 hover:border-indigo-500/50 transition-all">
+                    <i data-lucide="linkedin" class="w-6 h-6 text-indigo-400"></i>
+                    <span class="text-xs font-semibold text-white">LinkedIn</span>
+                    <span class="text-[11px] text-slate-400 truncate w-full">linkedin.com/in/anda</span>
+                </a>
+            </div>
+
+            <div class="pt-4">
+                <a href="CV_Muhammad_Rasya_Maulana.pdf" download="CV_Muhammad_Rasya_Maulana.pdf" class="inline-flex items-center space-x-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm rounded-xl transition-all shadow-lg shadow-indigo-600/30">
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    <span>Download Resume / CV</span>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-800/60">
-        <p>&copy; 2026 Portofolio Saya. Dibuat dengan Tailwind CSS & Vanilla JS.</p>
+        <p>&copy; 2026 Portofolio Mahasiswa Informatika. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript Script -->
+    <!-- Lucide Icons Script -->
     <script>
-        // Inisialisasi Ikon Lucide
         lucide.createIcons();
-
-        // Fitur Ganti Foto Profil Realtime
-        function previewImage(event) {
-            const reader = new FileReader();
-            reader.onload = function() {
-                const output = document.getElementById('avatarPreview');
-                output.src = reader.result;
-            }
-            if (event.target.files[0]) {
-                reader.readAsDataURL(event.target.files[0]);
-            }
-        }
-
-        // Handle Submit Form Kontak
-        function handleSubmit(event) {
-            event.preventDefault();
-            alert('Pesan Anda telah berhasil dikirim! Terima kasih.');
-            event.target.reset();
-        }
     </script>
 </body>
 </html>
